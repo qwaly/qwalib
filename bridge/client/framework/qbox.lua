@@ -1,9 +1,8 @@
 require("@qbx_core/modules/playerdata")
-Framework = {}
-local QBX = exports.qbx_core
+local qbx_core = exports.qbx_core
 
-function Framework.hasGroup(filter)
-	local player = QBX.PlayerData
+function Qwalib.bridge.framework.hasGroup(filter)
+	local player = qbx_core.PlayerData
 	local job = player.job
 
 	local _type = type(filter)
@@ -31,4 +30,5 @@ function Framework.hasGroup(filter)
 			end
 		end
 	end
+	return false
 end

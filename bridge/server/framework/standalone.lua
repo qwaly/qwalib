@@ -1,4 +1,3 @@
-Framework = {}
-
-function Framework.hasGroup(playerId, filter)
+function Qwalib.bridge.framework.hasGroup(playerId, filter)
+	return true
 end

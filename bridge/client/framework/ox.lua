@@ -1,5 +1,3 @@
-Framework = {}
-
 local playerGroups = exports.ox_core.GetPlayerData()?.groups or {}
 
 AddEventHandler('ox:playerLoaded', function(data)
@@ -11,7 +9,7 @@ RegisterNetEvent('ox:setGroup', function(name, grade)
 	playerGroups[name] = grade
 end)
 
-function Framework.hasGroup(filter)
+function Qwalib.bridge.framework.hasGroup(filter)
 	local _type = type(filter)
 
 	if _type == 'string' then
@@ -42,4 +40,5 @@ function Framework.hasGroup(filter)
 			end
 		end
 	end
+	return false
 end

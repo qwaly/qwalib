@@ -1,8 +1,6 @@
-Framework = {}
-
 local NDCore = exports["ND_Core"]
 
-function Framework.hasGroup(filter)
+function Qwalib.bridge.framework.hasGroup(filter)
 	local player = NDCore:getPlayer()
 	local _type = type(filter)
 
@@ -29,4 +27,5 @@ function Framework.hasGroup(filter)
 			end
 		end
 	end
+	return false
 end

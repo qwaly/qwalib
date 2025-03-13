@@ -1,15 +1,13 @@
-Framework = {}
-
-local QBCore = exports['qb-core']:GetCoreObject()
+local qb_core = exports['qb-core']:GetCoreObject()
 
 local success, result = pcall(function()
-	return QBCore.Functions.GetPlayerData()
+	return qb_core.Functions.GetPlayerData()
 end)
 
 local playerData = success and result or {}
 
 AddEventHandler('QBCore:Client:OnPlayerLoaded', function()
-	playerData = QBCore.Functions.GetPlayerData()
+	playerData = qb_core.Functions.GetPlayerData()
 end)
 
 RegisterNetEvent('QBCore:Player:SetPlayerData', function(val)
@@ -18,7 +16,7 @@ RegisterNetEvent('QBCore:Player:SetPlayerData', function(val)
 	playerData = val
 end)
 
-function Framework.hasGroup(filter)
+function Qwalib.bridge.framework.hasGroup(filter)
 	local _type = type(filter)
 
 	if _type == 'string' then
@@ -55,4 +53,5 @@ function Framework.hasGroup(filter)
 			end
 		end
 	end
+	return false
 end

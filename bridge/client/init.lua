@@ -1,3 +1,10 @@
+Qwalib = {
+	bridge = {
+		framework = {},
+		inventory = {}
+	}
+}
+
 if HasExport('es_extended.getSharedObject') then
 	require 'client.framework.esx'
 elseif HasExport('ND_Core.getPlayer') then

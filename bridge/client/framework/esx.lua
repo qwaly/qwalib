@@ -1,5 +1,3 @@
-Framework = {}
-
 local ESX = exports.es_extended:getSharedObject()
 local groups = { 'job', 'job2' }
 local playerGroups = {}
@@ -36,7 +34,7 @@ RegisterNetEvent('esx:setJob2', function(job)
 	playerGroups.job2 = job
 end)
 
-function Framework.hasGroup(filter)
+function Qwalib.bridge.framework.hasGroup(filter)
 	local _type = type(filter)
 	for i = 1, #groups do
 		local group = groups[i]
@@ -70,4 +68,5 @@ function Framework.hasGroup(filter)
 			end
 		end
 	end
+	return false
 end

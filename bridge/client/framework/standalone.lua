@@ -1,6 +1,4 @@
-Framework = {}
-
-function Framework.hasGroup(filter)
+function Qwalib.bridge.framework.hasGroup(filter)
 	local _type = type(filter)
 
 	if _type == 'string' then
@@ -20,4 +18,5 @@ function Framework.hasGroup(filter)
 			end
 		end
 	end
+	return false
 end
